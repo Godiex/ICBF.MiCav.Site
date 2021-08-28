@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ICBF.MICAV.Domain\ICBF.MICAV.Domain.csproj" />
+      <ProjectReference Include="..\ICBF.MICAV.Infrastructure\ICBF.MICAV.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Http\Dto" />
+      <Folder Include="Http\InputModel" />
+      <Folder Include="Services" />
+    </ItemGroup>
+
+</Project>
