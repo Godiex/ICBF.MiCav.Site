@@ -30,6 +30,12 @@ namespace ICBF.MICAV.Infrastructure.Base
         {
            return await _dbSet.FindAsync(id);
         }
+        
+        public async Task<bool> EstaRegistrado(int id)
+        {
+            var entidad =  await _dbSet.FindAsync(id);
+            return entidad != null;
+        }
 
         public async Task<T> ObtenerPrimeroODeterminado(Expression<Func<T, bool>> predicado)
         {
