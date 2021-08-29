@@ -6,7 +6,7 @@ namespace ICBF.MICAV.Infrastructure.Repositories
 {
     public class RepositorioUsuario : RepositorioGenerico<Usuario>, IRepositorioUsuario
     {
-        protected RepositorioUsuario(IDbContexto contexto) : base(contexto)
+        public RepositorioUsuario(IDbContexto contexto) : base(contexto)
         {
         }
     }

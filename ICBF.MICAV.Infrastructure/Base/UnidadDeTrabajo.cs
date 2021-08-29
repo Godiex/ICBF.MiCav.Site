@@ -2,6 +2,8 @@
 using System.Threading.Tasks;
 using ICBF.MICAV.Domain.Common;
 using ICBF.MICAV.Domain.Contract;
+using ICBF.MICAV.Domain.Repositories;
+using ICBF.MICAV.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
@@ -18,7 +20,9 @@ namespace ICBF.MICAV.Infrastructure.Base
         }
         
         #region [Respositorios]
-        
+        private IRepositorioUsuario _repositorioUsuario;
+
+        public IRepositorioUsuario RepositorioUsuario => _repositorioUsuario ??= new RepositorioUsuario(_dbContexto);
         #endregion  
         
         public void Dispose()
@@ -50,12 +54,12 @@ namespace ICBF.MICAV.Infrastructure.Base
             }
         }
 
-        public void Rollback()
+        public void RollBack()
         {
             _transaccion?.Rollback();
         }
 
-        public async Task SaveChanges()
+        public async Task GuardarCambios()
         {
             try
             {

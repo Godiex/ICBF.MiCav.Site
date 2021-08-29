@@ -2,6 +2,6 @@
 {
     public interface IEntidad<T>
     {
-        T Id { get; }
+        T Id { get; set; }
     }
 }

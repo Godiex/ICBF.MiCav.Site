@@ -8,6 +8,7 @@ namespace ICBF.MICAV.Domain.Entities
     {
         [Required]
         public string CodigoUsuario { get; set; }
+        public string NombreUsuario { get; set; }
         [Column("usuario")]
         public string Contrasena { get; set; }
         [Required]       

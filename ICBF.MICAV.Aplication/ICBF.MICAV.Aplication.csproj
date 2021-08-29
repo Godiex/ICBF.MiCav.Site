@@ -12,7 +12,6 @@
     <ItemGroup>
       <Folder Include="Http\Dto" />
       <Folder Include="Http\InputModel" />
-      <Folder Include="Services" />
     </ItemGroup>
 
 </Project>

@@ -6281,19 +6281,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\spayd\\.nuget\\packages\\": {}
+    "C:\\Users\\EQUIPO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Site\\ICBF.MICAV.Site.csproj",
+      "projectUniqueName": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Site\\ICBF.MICAV.Site.csproj",
       "projectName": "ICBF.MICAV.Site",
-      "projectPath": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Site\\ICBF.MICAV.Site.csproj",
-      "packagesPath": "C:\\Users\\spayd\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Site\\obj\\",
+      "projectPath": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Site\\ICBF.MICAV.Site.csproj",
+      "packagesPath": "C:\\Users\\EQUIPO\\.nuget\\packages\\",
+      "outputPath": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Site\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\spayd\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\EQUIPO\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6305,14 +6305,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Aplication\\ICBF.MICAV.Aplication.csproj": {
-              "projectPath": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Aplication\\ICBF.MICAV.Aplication.csproj"
+            "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Aplication\\ICBF.MICAV.Aplication.csproj": {
+              "projectPath": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Aplication\\ICBF.MICAV.Aplication.csproj"
             },
-            "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Domain\\ICBF.MICAV.Domain.csproj": {
-              "projectPath": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Domain\\ICBF.MICAV.Domain.csproj"
+            "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Domain\\ICBF.MICAV.Domain.csproj": {
+              "projectPath": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Domain\\ICBF.MICAV.Domain.csproj"
             },
-            "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Infrastructure\\ICBF.MICAV.Infrastructure.csproj": {
-              "projectPath": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Infrastructure\\ICBF.MICAV.Infrastructure.csproj"
+            "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Infrastructure\\ICBF.MICAV.Infrastructure.csproj": {
+              "projectPath": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Infrastructure\\ICBF.MICAV.Infrastructure.csproj"
             }
           }
         }
@@ -6370,20 +6370,8 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.17, 3.1.17]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
+            "version": "[3.1.16, 3.1.16]"
           }
         ],
         "frameworkReferences": {
@@ -6394,7 +6382,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

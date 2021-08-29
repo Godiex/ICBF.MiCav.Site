@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jolAdbq+WbX59UnK1V3dXE/ZyDN4I5/O63ezYqRO+mW41ZLSxsXwRD9QBseg7vltyIfy5rDN4usguHvSu9F5kg==",
+  "dgSpecHash": "pMJX+y8ZDahy/Y24XfwSogiD/WLNJNmslsHjfX33dlfgwWwesGwl1MFsFlazhA8amlk3fv3gr3Dh3GxgzdWpLg==",
   "success": true,
-  "projectFilePath": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Domain\\ICBF.MICAV.Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\spayd\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\spayd\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\spayd\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Domain\\ICBF.MICAV.Domain.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

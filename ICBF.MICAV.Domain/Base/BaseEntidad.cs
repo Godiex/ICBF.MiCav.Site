@@ -6,10 +6,10 @@ namespace ICBF.MICAV.Domain.Base
 {
     public abstract class BaseEntidad
     {
-        public string UsuarioCrea { get; set; }
-        public string UsuarioModifica { get; set; }
-        public DateTime FechaCrea { get; set; }
-        public DateTime? FechaModifica { get; set; }
+        private string UsuarioCrea { get; set; }
+        private string UsuarioModifica { get; set; }
+        private DateTime FechaCrea { get; set; }
+        private DateTime? FechaModifica { get; set; }
         public bool Estado { get; set; }
     }
     
@@ -17,7 +17,7 @@ namespace ICBF.MICAV.Domain.Base
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public virtual T Id { get; }
+        public virtual T Id { get; set; }
     }
 
 }

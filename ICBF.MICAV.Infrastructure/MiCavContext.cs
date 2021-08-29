@@ -1,4 +1,5 @@
-﻿using ICBF.MICAV.Infrastructure.Base;
+﻿using ICBF.MICAV.Domain.Entities;
+using ICBF.MICAV.Infrastructure.Base;
 using Microsoft.EntityFrameworkCore;
 
 namespace ICBF.MICAV.Infrastructure
@@ -11,7 +12,7 @@ namespace ICBF.MICAV.Infrastructure
         }
 
         #region DbSets
-        
+        public DbSet<Usuario> Users { get; set; }
         #endregion
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
