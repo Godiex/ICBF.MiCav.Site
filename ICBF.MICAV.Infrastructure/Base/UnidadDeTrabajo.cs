@@ -50,7 +50,7 @@ namespace ICBF.MICAV.Infrastructure.Base
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error  en {nameof(UnidadDeTrabajo)}.{CallerMember.GetName()}: {ex.Message}", ex);
+                throw new Exception($"Error  en {nameof(UnidadDeTrabajo)}.{CallerMember.GetNameMethod()}: {ex.Message}", ex);
             }
         }
 
@@ -67,7 +67,7 @@ namespace ICBF.MICAV.Infrastructure.Base
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error  en {nameof(UnidadDeTrabajo)}.{CallerMember.GetName()}: {ex.Message}", ex);
+                throw new Exception($"Error  en {nameof(UnidadDeTrabajo)}.{CallerMember.GetNameMethod()}: {ex.Message}", ex);
             }
         }
         

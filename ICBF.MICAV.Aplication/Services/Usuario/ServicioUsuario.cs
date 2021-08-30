@@ -2,11 +2,10 @@
 using System.Net;
 using System.Threading.Tasks;
 using ICBF.MICAV.Aplication.Base;
+using ICBF.MICAV.Domain.Common;
 using ICBF.MICAV.Domain.Contract;
 using ICBF.MICAV.Domain.Entities;
 using ICBF.MICAV.Domain.Repositories;
-using ICBF.MICAV.Infrastructure.Base;
-using ICBF.MICAV.Infrastructure.Repositories;
 
 namespace ICBF.MICAV.Aplication
 {
@@ -29,25 +28,31 @@ namespace ICBF.MICAV.Aplication
             catch (Exception e)
             {
                 UnidadDeTrabajo.RollBack();
-                return Respuesta<Usuario>.CrearRespuestaFallida(usuario,HttpStatusCode.BadRequest, 
-                    "Error al crear usuario");
+                return Respuesta<Usuario>.CrearRespuestaFallida(e,NombreServicio, CallerMember.GetNameMethod(), 
+                    HttpStatusCode.BadRequest, "Error al crear usuario");
             }
         }
 
         private async Task<Respuesta<Usuario>> RealizarRegistro(Usuario usuario)
         {
+            var existeUsuario = await ExisteUsuario(usuario);
+            if (existeUsuario)
+            {
+                return Respuesta<Usuario>.CrearRespuestaFallida(NombreServicio,CallerMember.GetNameMethod(),
+                    HttpStatusCode.Conflict, "el usuario ya existe");
+            }
+            UnidadDeTrabajo.BeginTransaction();
+            await _repositorioUsuario.Agregar(null);
+            UnidadDeTrabajo.Commit();
+            return Respuesta<Usuario>.CrearRespuestaExitosa(usuario, HttpStatusCode.Created,
+                "Usuario creado con exito");
+        }
+
+        private async Task<bool> ExisteUsuario(Usuario usuario)
+        {
             bool existeUsuario =
                 await _repositorioUsuario.ExisteRegistro(u => u.NombreUsuario == usuario.NombreUsuario);
-            if (!existeUsuario)
-            {
-                UnidadDeTrabajo.BeginTransaction();
-                await _repositorioUsuario.Agregar(usuario);
-                UnidadDeTrabajo.Commit();
-                return Respuesta<Usuario>.CrearRespuestaExitosa(usuario, HttpStatusCode.Created,
-                    "Usuario creado con exito");
-            }
-            return Respuesta<Usuario>.CrearRespuestaFallida(usuario, HttpStatusCode.Conflict,
-                "el usuario ya existe");
+            return existeUsuario;
         }
     }
 }

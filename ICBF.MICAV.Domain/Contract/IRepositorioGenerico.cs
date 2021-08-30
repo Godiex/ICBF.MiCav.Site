@@ -16,8 +16,10 @@ namespace ICBF.MICAV.Domain.Contract
         Task<List<T>> ObtenerPor(Expression<Func<T, bool>> filtro = null, string propiedadesIncluidas = "",
             Func<IQueryable<T>, IOrderedQueryable<T>> ordenarPor = null);
         Task Agregar(T entidad);
+        Task AgregarEnRango(List<T> entidades);
         Task Editar(T entidad);
         Task Remover(T entidad);
+        Task RemoverEnRango(List<T> entidades);
         Task<IEnumerable<T>> ObtenerTodos();
         Task<IEnumerable<T>> ObtenerDonde(Expression<Func<T, bool>> predicado);
         Task<int> ContarTodos();

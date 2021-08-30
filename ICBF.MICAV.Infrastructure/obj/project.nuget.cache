@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "K89WwVGi/10EKtAHgVXBOXStccUUPqETek4GvHG/JUq7AjqEk9N549HA6g+YX/4I2YfDX5t9q/9e6YrFLSlUMA==",
+  "dgSpecHash": "8ggX1XWCAwMZRMciGFCxe09C5iMJrM75rOD3gywcFQ1A+rcbyo3BU2ICXy7vDri48x58gbY1F+kYwx+YkQmjkQ==",
   "success": true,
   "projectFilePath": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Infrastructure\\ICBF.MICAV.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -100,10 +100,7 @@
     "C:\\Users\\spayd\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\spayd\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\spayd\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\spayd\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\spayd\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\spayd\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\spayd\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+    "C:\\Users\\spayd\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

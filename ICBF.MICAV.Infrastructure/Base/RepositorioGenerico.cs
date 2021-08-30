@@ -66,6 +66,12 @@ namespace ICBF.MICAV.Infrastructure.Base
             await _dbSet.AddAsync(entidad);
             await _db.SaveChangesAsync();
         }
+        
+        public async Task AgregarEnRango(List<T> entidades)
+        {
+            await _dbSet.AddRangeAsync(entidades);
+            await _db.SaveChangesAsync();
+        }
 
         public async Task Editar(T entidad)
         {
@@ -76,6 +82,12 @@ namespace ICBF.MICAV.Infrastructure.Base
         public async Task Remover(T entidad)
         {
             _db.Set<T>().Remove(entidad);
+            await _db.SaveChangesAsync();
+        }
+        
+        public async Task RemoverEnRango(List<T> entidades)
+        {
+            _db.Set<T>().RemoveRange(entidades);
             await _db.SaveChangesAsync();
         }
 
