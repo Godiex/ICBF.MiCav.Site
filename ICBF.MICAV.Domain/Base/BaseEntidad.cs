@@ -6,11 +6,11 @@ namespace ICBF.MICAV.Domain.Base
 {
     public abstract class BaseEntidad
     {
-        private string UsuarioCrea { get; set; }
-        private string UsuarioModifica { get; set; }
-        private DateTime FechaCrea { get; set; }
-        private DateTime? FechaModifica { get; set; }
-        public bool Estado { get; set; }
+        public string UsuarioCrea { get; set; }
+        public string UsuarioModifica { get; set; }
+        public DateTime FechaCrea { get; set;} = DateTime.Now;
+        public DateTime? FechaModifica { get; set; }
+        public bool Estado { get; set; } = true;
     }
     
     public abstract class Entidad<T> : BaseEntidad, IEntidad<T>

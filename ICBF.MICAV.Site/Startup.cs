@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using ICBF.MICAV.Domain.Contract;
 using ICBF.MICAV.Infrastructure;
 using ICBF.MICAV.Infrastructure.Base;
@@ -12,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
@@ -36,6 +38,13 @@ namespace ICBF.MICAV.Site
                 o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)));
             services.AddScoped<IUnidadDeTrabajo, UnidadDeTrabajo>();
             services.AddScoped<IDbContexto, MiCavContext>();
+            var mapperConfig = new MapperConfiguration(m =>
+            {
+                m.AddProfile(new MappingProfile());
+            });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddMvc(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

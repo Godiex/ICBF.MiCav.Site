@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using AutoMapper;
 using ICBF.MICAV.Aplication;
 using ICBF.MICAV.Aplication.Base;
 using ICBF.MICAV.Domain.Contract;
@@ -14,15 +15,15 @@ namespace ICBF.MICAV.Site
         
         private readonly ServicioUsuario _servicioUsuario;
 
-        public UsuarioController(IUnidadDeTrabajo unidadDeTrabajo)
+        public UsuarioController(IUnidadDeTrabajo unidadDeTrabajo, IMapper mapper)
         {
-            _servicioUsuario = new ServicioUsuario(unidadDeTrabajo);
+            _servicioUsuario = new ServicioUsuario(unidadDeTrabajo,mapper);
         }
         
         [HttpPost("Crear")]
-        public async Task<ActionResult<Respuesta<Usuario>>> CreateUser([FromBody] Usuario usuario)
+        public async Task<ActionResult<Respuesta<Usuario>>> CreateUser([FromBody] UsuarioRequest request)
         {
-            var respuesta = await _servicioUsuario.Crear(usuario);
+            var respuesta = await _servicioUsuario.Crear(request);
             return StatusCode((int)respuesta.Codigo, respuesta);
         }
     }

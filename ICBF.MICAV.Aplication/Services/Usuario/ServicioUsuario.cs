@@ -1,50 +1,58 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using AutoMapper;
 using ICBF.MICAV.Aplication.Base;
+using ICBF.MICAV.Aplication.Http.Dto.Usuario;
 using ICBF.MICAV.Domain.Common;
 using ICBF.MICAV.Domain.Contract;
 using ICBF.MICAV.Domain.Entities;
 using ICBF.MICAV.Domain.Repositories;
+using ICBF.MICAV.Infrastructure.Encrypt;
 
 namespace ICBF.MICAV.Aplication
 {
     public class ServicioUsuario : Servicio<Usuario>
     {
         private readonly IRepositorioUsuario _repositorioUsuario;
+        private readonly IMapper _mapper;
 
-        public ServicioUsuario(IUnidadDeTrabajo unidadDeTrabajo) : base(unidadDeTrabajo)
+        public ServicioUsuario(IUnidadDeTrabajo unidadDeTrabajo, IMapper mapper) : base(unidadDeTrabajo)
         {
             _repositorioUsuario = unidadDeTrabajo.RepositorioUsuario;
+            _mapper = mapper;
         }
 
-        public async Task<Respuesta<Usuario>> Crear(Usuario usuario)
+        public async Task<Respuesta<UsuarioDto>> Crear(UsuarioRequest request)
         {
             try
             {
-                Respuesta<Usuario> respuesta = await RealizarRegistro(usuario);
-                return respuesta;
+                Usuario usuario = _mapper.Map<Usuario>(request);
+                return await RealizarRegistro(usuario);
             }
             catch (Exception e)
             {
                 UnidadDeTrabajo.RollBack();
-                return Respuesta<Usuario>.CrearRespuestaFallida(e,NombreServicio, CallerMember.GetNameMethod(), 
+                return Respuesta<UsuarioDto>.CrearRespuestaFallida(e,NombreServicio, CallerMember.GetNameMethod(), 
                     HttpStatusCode.BadRequest, "Error al crear usuario");
             }
         }
 
-        private async Task<Respuesta<Usuario>> RealizarRegistro(Usuario usuario)
+        private async Task<Respuesta<UsuarioDto>> RealizarRegistro(Usuario usuario)
         {
-            var existeUsuario = await ExisteUsuario(usuario);
+            bool existeUsuario = await ExisteUsuario(usuario);
             if (existeUsuario)
             {
-                return Respuesta<Usuario>.CrearRespuestaFallida(NombreServicio,CallerMember.GetNameMethod(),
+                return Respuesta<UsuarioDto>.CrearRespuestaFallida(NombreServicio,CallerMember.GetNameMethod(),
                     HttpStatusCode.Conflict, "el usuario ya existe");
             }
+
+            usuario.Contrasena = Hash.GetSha256(usuario.Contrasena);
             UnidadDeTrabajo.BeginTransaction();
-            await _repositorioUsuario.Agregar(null);
+            await _repositorioUsuario.Agregar(usuario);
             UnidadDeTrabajo.Commit();
-            return Respuesta<Usuario>.CrearRespuestaExitosa(usuario, HttpStatusCode.Created,
+            var usuarioDto = _mapper.Map<UsuarioDto>(usuario);
+            return Respuesta<UsuarioDto>.CrearRespuestaExitosa(usuarioDto, HttpStatusCode.Created,
                 "Usuario creado con exito");
         }
 

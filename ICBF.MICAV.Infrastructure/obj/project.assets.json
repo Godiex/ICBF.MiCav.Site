@@ -5815,19 +5815,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\spayd\\.nuget\\packages\\": {}
+    "C:\\Users\\EQUIPO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Infrastructure\\ICBF.MICAV.Infrastructure.csproj",
+      "projectUniqueName": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Infrastructure\\ICBF.MICAV.Infrastructure.csproj",
       "projectName": "ICBF.MICAV.Infrastructure",
-      "projectPath": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Infrastructure\\ICBF.MICAV.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\spayd\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Infrastructure\\obj\\",
+      "projectPath": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Infrastructure\\ICBF.MICAV.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\EQUIPO\\.nuget\\packages\\",
+      "outputPath": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\spayd\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\EQUIPO\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5837,9 +5837,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Domain\\ICBF.MICAV.Domain.csproj": {
-              "projectPath": "D:\\Documentos\\Trabajo\\ICBF\\Micav\\MiCav\\ICBF.MiCav.Site\\ICBF.MICAV.Domain\\ICBF.MICAV.Domain.csproj"
+            "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Domain\\ICBF.MICAV.Domain.csproj": {
+              "projectPath": "D:\\Documentos\\Trabajo\\Icbf\\MiCav\\MICAV\\ICBF.MICAV\\ICBF.MICAV.Domain\\ICBF.MICAV.Domain.csproj"
             }
           }
         }
@@ -5852,6 +5853,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -5887,7 +5889,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
